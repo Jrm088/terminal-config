@@ -1,0 +1,30 @@
+# Font settings — updated for better Nerd Font support and clarity
+# font_family     DejaVu Sans Mono, Fira Code, monospace
+# bold_font       Meslo LG M Nerd Font Bold
+# italic_font     Meslo LG M Nerd Font Italic
+# bold_italic_font Meslo LG M Nerd Font Bold Italic
+
+font_size       18
+
+# Reduce wavy text
+subpixel_antialiasing yes
+
+# Use full hinting for crisp text rendering
+hinting         full
+
+# BEGIN_KITTY_THEME
+# IR Black
+include current-theme.conf
+# END_KITTY_THEME
+
+
+
+# BEGIN_KITTY_FONTS
+font_family      family="MesloLGS Nerd Font Mono"
+bold_font        auto
+italic_font      auto
+bold_italic_font auto
+# END_KITTY_FONTS
+
+background_opacity 0.5
+
