@@ -33,7 +33,48 @@ if command -v dircolors >/dev/null 2>&1; then
 fi
 
 # Add your custom functions or variables below
+
+# Add terminal-config directory to PATH so custom scripts inside can be run from anywhere
 export PATH="$HOME/terminal-config:$PATH"
+
+
+# Ollama start chat 
+function ollama-start-chat() {
+  local history_file="$HOME/.ollama_chat_history.txt"
+  local CYAN='\033[0;36m'
+  local NC='\033[0m' # No Color
+
+  # Create history file if it doesn't exist (but don't print contents)
+  if [[ ! -f "$history_file" ]]; then
+    touch "$history_file"
+  fi
+
+  echo "Starting Ollama chat with llama3. Type 'exit' to quit."
+
+  while true; do
+    # Show prompt with cyan "You:" label
+    echo -ne "${CYAN}You:${NC} "
+    read -r input
+    [[ "$input" == "exit" ]] && break
+
+    # Append your message to history with label (no colors)
+    echo -e "You: $input" >> "$history_file"
+
+    # Blank line before Ollama responds
+    echo ""
+
+    # Get Ollama response using full history as prompt
+    response=$(cat "$history_file" | ollama run llama3)
+
+    # Display with Ollama prompt and color, with blank line before for spacing
+    echo -e "\n${CYAN}Ollama:${NC} $response"
+
+    # Save Ollama response to history with label (no color codes)
+    echo -e "Ollama: $response" >> "$history_file"
+  done
+
+  echo "Chat session ended."
+}
 
 
 
