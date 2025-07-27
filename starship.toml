@@ -11,7 +11,7 @@ format = " [$user]($style)"
 [hostname]
 ssh_only = false
 style = "bold blue"
-format = "[](bold bright-blue)"
+format = "[](bold bright-blue)"
 
 
 [directory]
