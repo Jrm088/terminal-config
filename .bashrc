@@ -82,4 +82,5 @@ function ollama-start-chat() {
 
 #echo "bashrc loaded"
 
-pfetch
+#pfetch
+neofetch

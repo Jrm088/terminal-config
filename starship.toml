@@ -1,25 +1,25 @@
 format = """
-$username [//](bright-purple) $hostname [//](bright-purple) $directory
+$username [//](bold bright-white) $hostname [//](bold bright-white) $directory
 $character
 """
 
 [username]
 show_always = true
-style_user = "bold green"
+style_user = "bold blue"
 format = " [$user]($style)"
 
 [hostname]
 ssh_only = false
 style = "bold blue"
-format = "[](bold bright-blue)"
+format = "[](blue)"
 
 
 [directory]
-style = "white"
+style = "bold bright-white"
 read_only = " 󰌾"
 truncate_to_repo = false
 truncation_length = 3
-format = "[](bold bright-blue) [$path]($style)[$read_only]($style)"
+format = "[](bold blue) [$path]($style) [$read_only]($style)"
 
 [git_branch]
 symbol = " "
