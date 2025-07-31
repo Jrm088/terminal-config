@@ -13,19 +13,22 @@ subpixel_antialiasing yes
 hinting         full
 
 # BEGIN_KITTY_THEME
-# IR Black
+# Bluloco Dark
 include current-theme.conf
 # END_KITTY_THEME
 
 
 
 # BEGIN_KITTY_FONTS
-font_family      family="MesloLGS Nerd Font Mono"
+font_family      "MesloLGS Nerd Font Mono"
 bold_font        auto
 italic_font      auto
 bold_italic_font auto
 # END_KITTY_FONTS
 
 # Background Opacity
-background_opacity 0.7
+background_opacity 0.85
+
+kitty @ set-font --all "MesloLGS Nerd Font"
+
 
