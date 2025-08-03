@@ -36,8 +36,8 @@ init_config () {
     # default theme
     loginbox=00000066
     loginshadow=00000000
-    locktext="Type password to unlock..."
-    font="sans-serif"
+    locktext="Type pass..."
+    font="JetBrainsMono Nerd Font"
     ringcolor=ffffffff
     insidecolor=00000000
     separatorcolor=00000000
