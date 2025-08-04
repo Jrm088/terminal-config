@@ -25,7 +25,7 @@ exec_always --no-startup-id setxkbmap -option ctrl:nocaps
 
 # kill any hanging polybar processes
 exec_always killall polybar
-exec_always --no-startup-id ~/.config/polybar/launch_polybar.sh
+exec_always --no-startup-id ~/terminal-config/polybar/launch_polybar.sh
 
 bindsym Print exec maim "/home/$USER/Pictures/$(date).jpg"
 bindsym $mod+Print exec maim --window $(xdotool getactivewindow) "/home/$USER/Pictures/$(date).jpg"
