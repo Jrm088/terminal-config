@@ -3,6 +3,7 @@ set -e
 
 echo "Updating package lists..."
 sudo apt update
+sudo apt upgrade -y
 
 echo "Installing essential packages for i3 + LXQt rice..."
 
@@ -29,7 +30,9 @@ sudo apt install -y \
   starship \
   lxqt \
   lxqt-config \
-  lxqt-panel
+  lxqt-panel \
+  nemo \
+  rofi
 
 echo "Installation complete!"
 
