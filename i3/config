@@ -14,10 +14,12 @@ for_window [class="^.*"] border pixel 1
 set $mod Mod4
 # set $mod Mod1
 
-exec --no-startup-id picom
-#exec --no-startup-id feh --bg-scale ~/backgrounds/nice-blue-background.png
+exec --no-startup-id picom --config ~/.config/picom/picom.conf -b
+
+# Wallpapers
+exec --no-startup-id feh --bg-scale /home/jrm423/Downloads/wallhaven-1q83qg.jpg
 #exec --no-startup-id feh --bg-scale /home/jrm423/Downloads/hex-background-networking.jpg
-exec --no-startup-id feh --bg-scale /home/jrm423/Pictures/Wallpapers/dark-grunge-texture-background-with-scratches-stains.jpg
+#exec --no-startup-id feh --bg-scale /home/jrm423/Pictures/Wallpapers/dark-grunge-texture-background-with-scratches-stains.jpg
 
 
 exec --no-startup-id xrdb -merge ~/.Xresources
@@ -255,6 +257,7 @@ gaps outer 10
 # Screen lock
 exec --no-startup-id xss-lock --transfer-sleep-lock -- betterlockscreen -l
 exec_always --no-startup-id betterlockscreen -u ~/Pictures/Wallpapers/space.jpg --fx dim
+#exec_always --no-startup-id betterlockscreen -u /home/jrm423/Downloads/nature.jpg --fx dim
 
 #Dunst
 exec --no-startup-id dunst
