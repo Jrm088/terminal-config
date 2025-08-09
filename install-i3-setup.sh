@@ -26,13 +26,16 @@ sudo apt install -y \
   pfetch \
   picom \
   polybar \
-  sddm \
+  lightdm \
+  lightdm-gtk-greeter \
   starship \
   lxqt \
   lxqt-config \
   lxqt-panel \
   nemo \
-  rofi
-
+  rofi \
+  network-manager \
+  network-manager-gnome 
+  
 echo "Installation complete!"
 

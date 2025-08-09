@@ -14,5 +14,19 @@ sudo apt install -y \
   vim \
   git \
   curl \
-  wget
+  wget \
+  virtualbox \
+  virtualbox-ext-pack \
+  pulseaudio \
+  pavucontrol \
+  celluloid \
+  blueman \
+  bluetooth \
+  bluez \
+  libbluetooth3 \
+  pulseaudio-module-bluetooth \
+  libldacbt-enc2
+
+
 echo "Installation complete!"
+
