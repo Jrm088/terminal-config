@@ -78,9 +78,4 @@ function ollama-start-chat() {
   echo "Chat session ended."
 }
 
-
-
-#echo "bashrc loaded"
-
-#pfetch
 neofetch
