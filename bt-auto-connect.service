@@ -1,0 +1,14 @@
+[Unit]
+Description=Bluetooth Auto Connect Headphones
+After=bluetooth.target bt-agent.service
+Requires=bluetooth.target bt-agent.service
+
+[Service]
+Type=simple
+ExecStart=/home/jrm423/terminal-config/bt-auto-connect.sh
+Restart=on-failure
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target
+

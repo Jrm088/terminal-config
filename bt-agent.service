@@ -1,0 +1,13 @@
+[Unit]
+Description=Bluetooth Agent Service
+After=bluetooth.target
+Requires=bluetooth.target
+
+[Service]
+Type=simple
+ExecStart=/home/jrm423/terminal-config/bt-agent.sh
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
+
