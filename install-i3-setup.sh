@@ -1,11 +1,7 @@
 #!/bin/bash
-set -e
+echo "Installing essential packages for i3 + LXQt rice with SDDM..."
 
-echo "Updating package lists..."
-sudo apt update
-sudo apt upgrade -y
-
-echo "Installing essential packages for i3 + LXQt rice..."
+sudo apt update && sudo apt upgrade -y
 
 sudo apt install -y \
   betterlockscreen \
@@ -26,8 +22,14 @@ sudo apt install -y \
   pfetch \
   picom \
   polybar \
-  lightdm \
-  lightdm-gtk-greeter \
+  sddm \
+  qml-module-qtquick-controls \
+  qml-module-qtquick-controls2 \
+  qml-module-qtquick-layouts \
+  qml-module-qtgraphicaleffects \
+  qml-module-qtquick-window2 \
+  qml-module-qtquick2 \
+  libqt5svg5 \
   starship \
   lxqt \
   lxqt-config \
@@ -35,7 +37,10 @@ sudo apt install -y \
   nemo \
   rofi \
   network-manager \
-  network-manager-gnome 
-  
-echo "Installation complete!"
+  network-manager-gnome
+
+echo "Setting SDDM as default display manager..."
+sudo systemctl enable sddm
+
+echo "Installation complete! You can reboot now to use SDDM with your theme."
 

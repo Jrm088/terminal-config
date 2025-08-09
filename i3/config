@@ -17,7 +17,7 @@ set $mod Mod4
 exec --no-startup-id picom --config ~/.config/picom/picom.conf -b
 
 # Wallpapers
-exec --no-startup-id feh --bg-scale /home/jrm423/Downloads/wallhaven-1q83qg.jpg
+exec --no-startup-id feh --bg-scale /home/jrm423/Pictures/Wallpapers/cyber-punk.jpg
 #exec --no-startup-id feh --bg-scale /home/jrm423/Downloads/hex-background-networking.jpg
 #exec --no-startup-id feh --bg-scale /home/jrm423/Pictures/Wallpapers/dark-grunge-texture-background-with-scratches-stains.jpg
 
