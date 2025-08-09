@@ -81,8 +81,8 @@ floating_modifier $mod
 # start a terminal
 bindsym $mod+Return exec kitty
 
-# open thunar file manager
-#bindsym $mod+f exec thunar
+# Open Firefox
+bindsym $mod+shift+f exec firefox 
 
 # kill focused window
 bindsym $mod+Shift+q kill
