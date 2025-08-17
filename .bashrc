@@ -78,4 +78,6 @@ function ollama-start-chat() {
   echo "Chat session ended."
 }
 
+export PATH="$HOME/.npm/bin:$PATH"
+
 neofetch
