@@ -9,12 +9,18 @@
 #
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
-for_window [class="^.*"] border pixel 1
+for_window [class="^.*"] border pixel 0
 
 set $mod Mod4
 # set $mod Mod1
 
-exec --no-startup-id picom --config ~/.config/picom/picom.conf -b
+# Launch Picom
+#exec --no-startup-id picom --config ~/.config/picom/picom.conf -b
+exec --no-startup-id picom --experimental-backends -b --config ~/.config/picom/picom.conf
+
+# Launch Picom/hide harmless warning
+#exec --no-startup-id picom --config ~/.config/picom/picom.conf -b >/dev/null 2>&1 &
+
 
 # Wallpapers
 exec --no-startup-id feh --bg-scale /home/jrm423/Pictures/Wallpapers/cyber-punk.jpg
@@ -267,3 +273,11 @@ exec --no-startup-id dunst
 # Running dual monitors
 #exec --no-startup-id xrandr --output HDMI-1 --auto --right-of eDP-1
 
+# Keyring for proton-bridge
+exec --no-startup-id /usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh,gpg
+
+exec --no-startup-id sh -c "sleep 2 && PROTONMAIL_BRIDGE_NO_KEYRING=1 /usr/lib/protonmail/bridge/proton-bridge"
+
+
+# Start Proton Bridge after 2 seconds
+exec --no-startup-id sh -c "sleep 2 && /usr/lib/protonmail/bridge/proton-bridge"
