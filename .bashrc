@@ -83,3 +83,6 @@ export PATH="$HOME/.npm/bin:$PATH"
 neofetch
 export PATH="$HOME/zig-linux-x86_64-0.13.0:$PATH"
 export PATH=$PATH:/usr/lib/protonmail/bridge
+
+#BAT THEME
+export BAT_THEME="Dracula"
